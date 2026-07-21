@@ -12,7 +12,7 @@ print(a / 4)
 print(a ** 5)
 
 
-#vectorized arithmetics
+#vectorized arithmetic
 
 print(np.sqrt(a))
 print(np.floor(b))
