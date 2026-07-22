@@ -12,14 +12,14 @@ print(a / 4)
 print(a ** 5)
 
 
-#vectorized arithmetic
+# vectorized arithmetic
 
 print(np.sqrt(a))
 print(np.floor(b))
 print(np.ceil(b))
 
 
-#element-based arithmetic
+# element-based arithmetic
 
 print(a + b)
 print(a - b)
@@ -28,7 +28,7 @@ print(a / b)
 print(a ** b)
 
 
-#comparison operator
+# comparison operator
 
 a[a == 1] = 0
 print(a)
