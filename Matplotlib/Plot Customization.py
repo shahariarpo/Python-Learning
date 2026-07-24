@@ -26,7 +26,7 @@ line_style = dict(marker=".",
                   linewidth=2)
 
 
-plt.title("Test Graph",
+plt.title("Unemployment Chart",
           fontsize=20,
           family="Arial",
           fontweight="bold")
