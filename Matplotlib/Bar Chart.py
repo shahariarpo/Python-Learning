@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from fontTools.diff import color
 
 categories = np.array(["Grains", "Fruit", "Vegetables", "Protein", "Dairy", "Sweets"])
 values = np.array([4, 3, 2, 6, 4, 1])
