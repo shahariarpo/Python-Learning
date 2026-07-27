@@ -11,6 +11,23 @@ class Animals:
     def sleep(self):
         print(f"{self.name} is sleeping")
 
+class Prey(Animals):
+    def flee(self):
+        print(f"{self.name} is fleeing")
+
+class Predator(Animals):
+    def hunt(self):
+        print(f"{self.name} is hunting")
+
+class Hawk(Predator):
+    pass
+
+class Deer(Prey):
+    pass
+
+class Snake(Prey, Predator):
+    pass
+
 class Dog(Animals):
 
     def speak(self):
@@ -22,6 +39,8 @@ class Cat(Animals):
 
 dog = Dog("Max")
 cat = Cat("Tom")
+hawk = Hawk("Tony")
+deer = Deer("Bambi")
 
 print(f"Number of animals: {Animals.num_animals}")
 print(dog.name)
@@ -29,3 +48,6 @@ print(cat.name)
 
 dog.speak()
 cat.speak()
+hawk.hunt()
+deer.sleep()
+hawk.eat()
