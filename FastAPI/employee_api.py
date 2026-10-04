@@ -37,7 +37,7 @@ def get_employee(employee_id: Optional[int] = None, name: Optional[str] = None):
 def update_employee(employee_id: int, employee: UpdateEmployee):
     if employee_id not in employees:
         raise HTTPException(
-            status_code= 400, 
+            status_code= 404, 
             detail="Employee does not exist"
             )
     #Store a copy of employee to retain unchanged information
@@ -51,3 +51,9 @@ def update_employee(employee_id: int, employee: UpdateEmployee):
     employees[employee_id] = updated_employee
     return employees[employee_id]
 
+@app.delete("/delete-employee")
+def delete_employee(employee_id: int):
+    if employee_id not in employees:
+        raise HTTPException(status_code= 404, detail="Not found")
+    del employees[employee_id]
+    raise HTTPException(status_code= 200, detail="Deleted successfully")
